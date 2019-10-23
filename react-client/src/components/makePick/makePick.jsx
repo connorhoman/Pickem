@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 class MakePick extends React.Component {
     constructor(props) {
