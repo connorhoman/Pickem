@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import LogIn from '../src/components/login/login.jsx';
+import History from '../src/components/history/history.jsx';
+import MakePick from '../src/components/makePick/makePick.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +13,11 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>Hello World</div>    
+      <div>
+        <LogIn /> 
+        <History />
+        <MakePick />   
+      </div>
     );
   }
 }
