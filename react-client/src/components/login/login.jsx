@@ -7,8 +7,6 @@ const Wrapper = styled.div`
   border: 4px solid black;
 `;
 const Form = styled.form`
-  margin: 0px;
-  width: 131px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
 `;
@@ -20,10 +18,10 @@ const Button = styled.button`
   font-size: 26px;
 `;
 const LoggedIn = styled.div`
+  font-family: 'Courier New', Courier, monospace;
   font-size: 13px;
   text-align: center;
   margin-top: 30px;
-  font-family: 'Courier New', Courier, monospace;
 `;
 
 class LogIn extends React.Component {
@@ -39,7 +37,6 @@ class LogIn extends React.Component {
 
     login() {
       this.setState({loggedIn: true, background: '#37c765'});
-      console.log('Logged In');
     }
 
     failedLogin() {
@@ -78,10 +75,10 @@ class LogIn extends React.Component {
           <Wrapper style={{background: this.state.background}}>
             <Form>
               <div>
-                <input onChange={(e) => this.setState({name: e.target.value})} fontFamily='Courier New' placeholder='Name'></input>
+                <input onChange={(e) => this.setState({name: e.target.value})} placeholder='Name'></input>
               </div>
               <div>
-                <input onChange={(e) => this.setState({pin: e.target.value})} fontFamily='Courier New' placeholder='PIN'></input>
+                <input onChange={(e) => this.setState({pin: e.target.value})} placeholder='PIN'></input>
               </div>   
             </Form>
             <Button onClick={() => this.checkCredentials()}>GO</Button>
