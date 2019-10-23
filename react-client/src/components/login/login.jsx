@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Form = styled.form`
+const Wrapper = styled.div`
+  width: 131px;
+  height: 74px;
   border: 4px solid black;
+`;
+const Form = styled.form`
   margin: 0px;
   width: 131px;
   font-family: 'Courier New', Courier, monospace;
@@ -10,8 +14,16 @@ const Form = styled.form`
 `;
 const Button = styled.button`
   font-family: 'Courier New', Courier, monospace;
-  margin-left: 45px;
+  margin-left: 43px;
+  margin-top: 1px;
+  margin-bottom: 1px;
   font-size: 26px;
+`;
+const LoggedIn = styled.div`
+  font-size: 13px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Courier New', Courier, monospace;
 `;
 
 class LogIn extends React.Component {
@@ -20,10 +32,13 @@ class LogIn extends React.Component {
       this.state = { 
         name: '',
         pin: '',
+        loggedIn: false,
+        background: '#bec4c0',
       }
     }
 
     login() {
+      this.setState({loggedIn: true, background: '#37c765'});
       console.log('Logged In');
     }
 
@@ -52,19 +67,27 @@ class LogIn extends React.Component {
     }
   
     render () {
-      return (
-        <div>
-          <Form>
-            <div>
-              <input onChange={(e) => this.setState({name: e.target.value})} fontFamily='Courier' placeholder='Name'></input>
-            </div>
-            <div>
-              <input onChange={(e) => this.setState({pin: e.target.value})} fontFamily='Courier' placeholder='PIN'></input>
-            </div>   
-          </Form>
-          <Button onClick={() => this.checkCredentials()}>GO</Button>
-        </div>
-      );
+      if (this.state.loggedIn) {
+        return (
+          <Wrapper style={{background: this.state.background}}>
+            <LoggedIn>{this.state.name} logged in</LoggedIn>
+          </Wrapper>         
+        )
+      } else {
+        return (
+          <Wrapper style={{background: this.state.background}}>
+            <Form>
+              <div>
+                <input onChange={(e) => this.setState({name: e.target.value})} fontFamily='Courier New' placeholder='Name'></input>
+              </div>
+              <div>
+                <input onChange={(e) => this.setState({pin: e.target.value})} fontFamily='Courier New' placeholder='PIN'></input>
+              </div>   
+            </Form>
+            <Button onClick={() => this.checkCredentials()}>GO</Button>
+          </Wrapper>
+        );
+      }
     }
 }
 
