@@ -23,6 +23,8 @@ const LoggedIn = styled.div`
   text-align: center;
   margin-top: 30px;
 `;
+const Inputs = styled.input`
+`;
 
 class LogIn extends React.Component {
     constructor(props) {
@@ -38,11 +40,9 @@ class LogIn extends React.Component {
     login() {
       this.setState({loggedIn: true, background: '#37c765'});
     }
-
     failedLogin() {
       window.alert('Incorrect Username or PIN');
     }
-
     checkCredentials() {
       const credentials = {
         manasseh: '1214',
@@ -62,6 +62,11 @@ class LogIn extends React.Component {
         this.failedLogin();
       }
     }
+    keyPress(e){
+      if(e.keyCode == 13){
+        this.checkCredentials();
+      }
+    }
   
     render () {
       if (this.state.loggedIn) {
@@ -75,10 +80,10 @@ class LogIn extends React.Component {
           <Wrapper style={{background: this.state.background}}>
             <Form>
               <div>
-                <input onChange={(e) => this.setState({name: e.target.value})} placeholder='Name'></input>
+                <Inputs onChange={(e) => this.setState({name: e.target.value})} placeholder='Name'></Inputs>
               </div>
               <div>
-                <input onChange={(e) => this.setState({pin: e.target.value})} placeholder='PIN'></input>
+                <Inputs onKeyDown= {(e) => this.keyPress(e)} onChange={(e) => this.setState({pin: e.target.value})} placeholder='PIN'></Inputs>
               </div>   
             </Form>
             <Button onClick={() => this.checkCredentials()}>GO</Button>
