@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 131px;
+  width: 10%;
   height: 104px;
   border: 4px solid black;
 `;
@@ -25,9 +25,12 @@ const LoggedIn = styled.div`
 `;
 const Inputs = styled.input`
   font-family: 'Courier New', Courier, monospace;
-  width: 125px;
+  width: 94%;
   height: 25px;
   font-size: 20px;
+`;
+const Box = styled.div`
+  display: inline;
 `;
 
 class LogIn extends React.Component {
@@ -75,19 +78,25 @@ class LogIn extends React.Component {
     render () {
       if (this.state.loggedIn) {
         return (
-          <Wrapper style={{background: this.state.background}}>
-            <LoggedIn>{this.state.name} logged in</LoggedIn>
-          </Wrapper>         
+          <Box>
+            <Wrapper style={{background: this.state.background}}>
+              <LoggedIn>{this.state.name} logged in</LoggedIn>
+            </Wrapper>  
+          </Box>
+         
         )
       } else {
         return (
-          <Wrapper style={{background: this.state.background}}>
-            <Form>
-              <Inputs onChange={(e) => this.setState({name: e.target.value})} placeholder='Name'></Inputs>
-              <Inputs onKeyDown= {(e) => this.keyPress(e)} onChange={(e) => this.setState({pin: e.target.value})} placeholder='PIN'></Inputs>
-            </Form>
+          <Box> 
+            <Wrapper style={{background: this.state.background}}>
+              <Form>
+                <Inputs onChange={(e) => this.setState({name: e.target.value})} placeholder='Name'></Inputs>
+                <Inputs onKeyDown= {(e) => this.keyPress(e)} onChange={(e) => this.setState({pin: e.target.value})} placeholder='PIN'></Inputs>
+              </Form>
             <Button onClick={() => this.checkCredentials()}>GO</Button>
-          </Wrapper>
+            </Wrapper>
+          </Box>
+          
         );
       }
     }

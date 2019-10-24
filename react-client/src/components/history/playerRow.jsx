@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Box = styled.div`
-
-`;
-
-class MakePick extends React.Component {
+class PlayerRow extends React.Component {
     constructor(props) {
       super(props);
       this.state = { 
@@ -14,11 +10,9 @@ class MakePick extends React.Component {
   
     render () {
       return (
-        <Box>
-          MakePick
-        </Box>
+        <div>Player Row</div>   
       );
     }
 }
 
-export default MakePick;
+export default PlayerRow;
