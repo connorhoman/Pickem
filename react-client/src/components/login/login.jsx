@@ -44,6 +44,7 @@ class LogIn extends React.Component {
 
     login() {
       this.setState({loggedIn: true, background: '#37c765'});
+      this.props.logInUser(this.state.name);
     }
     failedLogin() {
       window.alert('Incorrect Username or PIN');

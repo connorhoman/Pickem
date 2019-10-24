@@ -28,18 +28,23 @@ const Header = styled.div`
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
+      user: ''
     }
+  }
+
+  logInUser(user) {
+    this.setState({user: user});
   }
 
   render () {
     return (
       <div>
-        <LogIn />
+        <LogIn logInUser={this.logInUser.bind(this)}/>
         <Header>
           <Title>Fantasy StudMuffins Weekly Pick'em</Title>
         </Header>
-        <MakePick />  
+        <MakePick user={this.state.user}/>  
         <History />
       </div>
     );
