@@ -29,7 +29,7 @@ class History extends React.Component {
     render () {
       return (
         <Box>
-          {this.state.standings.map(playerRow => <PlayerRow props={playerRow} key={playerRow}>{playerRow}</PlayerRow>)}
+          {this.state.standings.map((playerRow, i) => <PlayerRow data={playerRow} key={i} standing={(i + 1)}>{playerRow}</PlayerRow>)}
         </Box>
       );
     }

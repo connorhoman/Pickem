@@ -33,6 +33,10 @@ class App extends React.Component {
     }
   }
 
+  componentDidMoun() {
+    // GET Request to NFL API 
+  }
+
   logInUser(user) {
     this.setState({user: user});
   }
