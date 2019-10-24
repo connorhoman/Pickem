@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import PlayerRow from '../history/playerRow.jsx';
 
 const Box = styled.div`
-  float: right;
-  width: 88.5%;
-  border: 4px solid black;
+  right: 8px;
+  top: 127px;
+  width: 87.7%;
+  border: 3px solid black;
+  position: absolute;
 `;
 
 class History extends React.Component {

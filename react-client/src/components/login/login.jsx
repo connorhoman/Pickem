@@ -29,9 +29,7 @@ const Inputs = styled.input`
   height: 25px;
   font-size: 20px;
 `;
-const Box = styled.div`
-  display: inline;
-`;
+
 
 class LogIn extends React.Component {
     constructor(props) {
@@ -77,26 +75,20 @@ class LogIn extends React.Component {
   
     render () {
       if (this.state.loggedIn) {
-        return (
-          <Box>
+        return (         
             <Wrapper style={{background: this.state.background}}>
               <LoggedIn>{this.state.name} logged in</LoggedIn>
-            </Wrapper>  
-          </Box>
-         
+            </Wrapper>         
         )
       } else {
         return (
-          <Box> 
             <Wrapper style={{background: this.state.background}}>
               <Form>
                 <Inputs onChange={(e) => this.setState({name: e.target.value})} placeholder='Name'></Inputs>
                 <Inputs onKeyDown= {(e) => this.keyPress(e)} onChange={(e) => this.setState({pin: e.target.value})} placeholder='PIN'></Inputs>
               </Form>
-            <Button onClick={() => this.checkCredentials()}>GO</Button>
-            </Wrapper>
-          </Box>
-          
+              <Button onClick={() => this.checkCredentials()}>GO</Button>
+            </Wrapper>         
         );
       }
     }

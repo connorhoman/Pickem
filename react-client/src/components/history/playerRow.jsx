@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Box = styled.div`
   border: 1px ridge black;
-  height: 55px;
+  height: 56.6px;
 `;
 
 class PlayerRow extends React.Component {
@@ -14,7 +14,6 @@ class PlayerRow extends React.Component {
     }
   
     render () {
-
       return (
         <Box>{this.props.props}</Box>   
       );

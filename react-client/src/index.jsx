@@ -5,8 +5,6 @@ import LogIn from '../src/components/login/login.jsx';
 import History from '../src/components/history/history.jsx';
 import MakePick from '../src/components/makePick/makePick.jsx';
 
-const Box = styled.div`
-`;
 const Title = styled.div`
   font-family: 'Courier New', Courier, monospace;
   font-size: 50px;
@@ -14,7 +12,7 @@ const Title = styled.div`
   text-align: center;
   margin-top: 25px;
 `;
-const HeaderBox = styled.div`
+const Header = styled.div`
   text-align: center;
   background: #bec4c0;
   border: 4px solid black;
@@ -36,14 +34,14 @@ class App extends React.Component {
 
   render () {
     return (
-      <Box>
+      <div>
         <LogIn />
-        <HeaderBox>
+        <Header>
           <Title>Fantasy StudMuffins Weekly Pick'em</Title>
-        </HeaderBox>
+        </Header>
         <MakePick />  
         <History />
-      </Box>
+      </div>
     );
   }
 }
