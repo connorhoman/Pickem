@@ -12,7 +12,7 @@ const Title = styled.div`
   font-size: 50px;
   font-weight: 600;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
 `;
 const HeaderBox = styled.div`
   text-align: center;
@@ -39,7 +39,7 @@ class App extends React.Component {
       <Box>
         <LogIn />
         <HeaderBox>
-          <Title>Fantasy StudMuffin's Weekly Pickem</Title>
+          <Title>Fantasy StudMuffins Weekly Pick'em</Title>
         </HeaderBox>
         <MakePick />  
         <History />

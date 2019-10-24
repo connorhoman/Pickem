@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Box = styled.div`
+  border: 1px ridge black;
+  height: 55px;
+`;
+
 class PlayerRow extends React.Component {
     constructor(props) {
       super(props);
@@ -9,8 +14,9 @@ class PlayerRow extends React.Component {
     }
   
     render () {
+
       return (
-        <div>Player Row</div>   
+        <Box>{this.props.props}</Box>   
       );
     }
 }
