@@ -25,6 +25,8 @@ const Pound = styled.span`
   position: absolute;
   left: 10px;
 `;
+const Picks = styled.span`
+`;
 
 class PlayerRow extends React.Component {
     constructor(props) {
@@ -34,7 +36,7 @@ class PlayerRow extends React.Component {
     }
   
     render () {
-      console.log(this)
+      console.log(this.props.data.picks)
       return (
         <Box>
           <div>
@@ -43,8 +45,11 @@ class PlayerRow extends React.Component {
               {this.props.standing}
             </Position>
             <Name>
-              {this.props.data}
+              {this.props.data.name}
             </Name>
+            <Picks>
+              {this.props.data.picks}
+            </Picks>
           </div>
         </Box>   
       );

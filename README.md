@@ -23,3 +23,5 @@ score
 
 ##External API 
 ESPN? For NFL Schedule and game results
+
+mongoimport --jsonArray --db pickem --collection players --file playerData.json

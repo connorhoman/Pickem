@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import styled from 'styled-components';
 import PlayerRow from '../history/playerRow.jsx';
 
@@ -14,17 +15,21 @@ class History extends React.Component {
     constructor(props) {
       super(props);
       this.state = { 
-        standings: ['connor', 'emyr', 'manasseh', 'fabian', 'carl', 'trevor', 'james', 'jordan', 'joseph', 'marcus'],
+        standings: [],
       }
     }
 
-    // componentDidMount() {
-    //   this.setState({standings: this.getStandings()});
-    // }
-
-    // getStandings() {
-    //   // Return GET Request for array of players in order of most points to least points
-    // }
+    componentDidMount() {
+      $.ajax({
+        url: '/players', 
+        success: (data) => {
+          this.setState({standings: data});
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      });
+    }
   
     render () {
       return (
