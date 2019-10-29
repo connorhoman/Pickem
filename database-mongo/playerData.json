@@ -1,42 +1,42 @@
 [
   {
-    "name": "fabian",
-    "picks": []
+    "name": "Fabian",
+    "picks": ["LAC", "SF", "NYG", "SEA", "CHI", "DAL", "JAX"]
   },
   {
-    "name": "connor",
-    "picks": []
+    "name": "Connor",
+    "picks": ["PHI", "NE", "DAL", "LAC", "MIN", "BAL", "BUF"]
   },
   {
-    "name": "carl",
-    "picks": []
+    "name": "Carl",
+    "picks": ["LAC", "HOU", "DAL", "LAC", "PHI", "SEA", "NO"]
   },
   {
-    "name": "emyr",
-    "picks": []
+    "name": "Emyr",
+    "picks": ["PHI", "KC", "SF", "SEA", "LAC", "DAL", "GB"]
   },
   {
-    "name": "james",
-    "picks": []
+    "name": "James",
+    "picks": ["DEN", "CLE", "SF", "LAC", "NE", "DAL", "NYG"]
   },
   {
-    "name": "trevor",
-    "picks": []
+    "name": "Trevor",
+    "picks": ["CLE", "NE", "DAL", "LAC", "PHI", "BAL", "BUF"]
   }
   ,{
-    "name": "joseph",
-    "picks": []
+    "name": "Joseph",
+    "picks": ["SEA", "BAL", "DAL", "IND", "MIN", "WAS", "BUF"]
   },
   {
-    "name": "jordan",
-    "picks": []
+    "name": "Jordan",
+    "picks": ["SEA", "LAC", "MIN", "LAR", "TEN", "DAL", "BUF"]
   }
   ,{
-    "name": "marcus",
-    "picks": []
+    "name": "Marcus",
+    "picks": ["PHI", "NE", "DAL", "LAC", "CHI", "BAL", "BUF"]
   },
   {
-    "name": "manasseh",
-    "picks": []
+    "name": "Manasseh",
+    "picks": ["DEN", "HOU", "DAL", "LAC", "SF", "BAL", "BUF"]
   }
 ]

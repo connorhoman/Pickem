@@ -14,8 +14,8 @@ const Title = styled.div`
 `;
 const Header = styled.div`
   text-align: center;
-  background: #bec4c0;
-  border: 4px solid black;
+  background: #37c765;
+  border: 4px solid white;
   position: absolute;
   top: 0px;
   right: 0px;

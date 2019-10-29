@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 10%;
   height: 104px;
-  border: 4px solid black;
+  border: 4px solid white;
 `;
 const Form = styled.form`
   font-family: 'Courier New', Courier, monospace;

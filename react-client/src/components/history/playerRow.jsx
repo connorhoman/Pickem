@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import Pick from '../makePick/pick.jsx';
 
 const Box = styled.div`
-  border: 1px ridge black;
+  border: 1px ridge white;
   height: 56.6px;
+  background: #bec4c0;
 `;
 const Position = styled.span`
   font-family: 'Courier New', Courier, monospace;
@@ -36,7 +38,6 @@ class PlayerRow extends React.Component {
     }
   
     render () {
-      console.log(this.props.data.picks)
       return (
         <Box>
           <div>
@@ -48,7 +49,7 @@ class PlayerRow extends React.Component {
               {this.props.data.name}
             </Name>
             <Picks>
-              {this.props.data.picks}
+              {this.props.data.picks.map((pick, i) => <Pick team={pick} week={i + 1} key={i}>{pick}</Pick>)}
             </Picks>
           </div>
         </Box>   
